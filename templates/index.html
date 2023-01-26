@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {# import jquery #}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    {# import bootstrap #}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="input-div">
+
+
+            <label for="prompt-input">Prompt:</label>
+            <input type="text" id="prompt-input" name="prompt-input">
+            {# submit button #}
+            <button type="submit" id="submit-button">Submit</button>
+        </div>
+        <div id="options-div">
+
+            <div class="main-option">
+                <label for="toggle-input">Toggle:</label>
+                <input type="checkbox" id="toggle-input" name="toggle-input">
+            </div>
+            <div class="main-option">
+                <label for="slider-input">Slider: sharp vs blurry </label>
+                <input type="range" id="slider-input" name="slider-input" min="0" max="100" step="1">
+            </div>
+
+            <div class="main-option">
+                <label for="slider-input">Slider: narrow or wide ratio</label>
+                <input type="range" id="slider-input" name="slider-input" min="0" max="100" step="1">
+            </div>
+
+            <div class="main-option">
+                <label for="slider-input">Slider: more or less of custom prompt</label>
+                <input type="text" id="prompt-input" name="prompt-input">
+                <input type="range" id="slider-input" name="slider-input" min="0" max="100" step="1">
+            </div>
+
+            <div class="main-option">
+                <label for="slider-input">Slider:</label>
+                <input type="range" id="slider-input" name="slider-input" min="0" max="100" step="1">
+            </div>
+
+
+        </div>
+        <div id="output-div">
+            <p>Adjusted Input: <span id="adjusted-input">
+                    <p>this is where the adjusted input will be displayed.</p>
+
+                </span></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
